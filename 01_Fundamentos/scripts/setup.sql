@@ -20,7 +20,7 @@ GO
 -- =========================================================================================
 CREATE TABLE Categorias (CategoriaID   INTEGER IDENTITY(1,1) PRIMARY KEY,
                          NomeCategoria VARCHAR(100) NOT NULL,
-                         Ativo         BIT DEFAULT 1);
+                         Ativo         BIT          DEFAULT 1);
 GO
 
 -- 2. Tabela de Clientes
@@ -29,7 +29,7 @@ CREATE TABLE Clientes (ClienteID    INTEGER IDENTITY(1,1) PRIMARY KEY,
                        Email        VARCHAR(80)  UNIQUE NOT NULL,
                        Cidade       VARCHAR(100) NOT NULL,
                        Estado       CHAR(2)      NOT NULL,
-                       DataCadastro DATETIME DEFAULT GETDATE());
+                       DataCadastro DATETIME     DEFAULT GETDATE());
 GO
 
 -- 3. Tabela de Produtos
